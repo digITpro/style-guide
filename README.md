@@ -82,7 +82,7 @@ Programming
 * Guesses at future functionality should not be designed into the application.
 * Keep methods small.
 * Keep the code simple.
-* Limit lines to a maximum of 80 characters.
+* Limit lines to a maximum of 120 characters.
 * Make sure all tests pass before code is merged into a shared repository.
 * Name variables, methods, and classes with intention-revealing names..
 * No spaces after `(`, `[`. No spaces before `]`, `)`.
@@ -148,6 +148,8 @@ Ruby
 * Use `unless boolean?` instead of `if !boolean?`.
 * Use [Factory Girl](https://github.com/thoughtbot/factory_girl) for setting up
   complicated test data.
+* Use Ruby >= 1.9 syntax for hashes. Prefer { a: :b } over { :a => :b }.
+* Use a = b and not a=b.
 
 Rails
 -----
@@ -157,7 +159,6 @@ Rails
 * Avoid `member` and `collection` routes.
 * Avoid Single Table Inheritance.
 * Consider extracting `private` methods to their own object.
-* Deploy to [Heroku](http://heroku.com).
 * Don't invoke a model's class directly from a view.
 * Don't use SQL or SQL fragments (`where('inviter_id is not null')`) outside of
   models.
@@ -185,7 +186,6 @@ Rails
   development mode.
 * Use `I18n.t 'dot.separated.key'` over
   `I18n.t :key, :scope => [:dot, :separated]`.
-* Use [Haml](http://haml-lang.com) over ERb.
 * Use `has_and_belongs_to_many` if all you need is a join table. Start simple.
 * Use namespaced locale lookup in the views by prefixing a period: `t '.title'`.
 * Use nested routes to express `belongs_to` relationships between resources.
